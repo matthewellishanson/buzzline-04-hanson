@@ -1,5 +1,5 @@
 """
-json_consumer_hanson.py
+project_consumer_hanson.py
 
 Consume json messages from a Kafka topic and visualize sentiment scores in real-time.
 
@@ -48,24 +48,26 @@ load_dotenv()
 
 def get_kafka_topic() -> str:
     """Fetch Kafka topic from environment or use default."""
-    topic = os.getenv("BUZZ_TOPIC", "unknown_topic")
+    topic = os.getenv("PROJECT_TOPIC", "unknown_topic")
     logger.info(f"Kafka topic: {topic}")
     return topic
 
 
 def get_kafka_consumer_group_id() -> str:
     """Fetch Kafka consumer group id from environment or use default."""
-    group_id: str = os.getenv("BUZZ_CONSUMER_GROUP_ID", "default_group")
+    group_id: str = os.getenv("PROJECT_CONSUMER_GROUP_ID", "default_group")
     logger.info(f"Kafka consumer group id: {group_id}")
     return group_id
+
 
 
 #####################################
 # Set up data structures
 #####################################
 
-# Initialize a dictionary to store author counts
-author_counts = defaultdict(int)
+# Initialize a list to store sentiment scores
+sentiment_scores = []
+timestamps = []
 
 #####################################
 # Set up live visuals
@@ -88,36 +90,18 @@ plt.ion()
 
 
 def update_chart():
-    """Update the live chart with the latest author counts."""
-    # Clear the previous chart
+    """Update the live chart with the latest sentiment scores over time."""
     ax.clear()
 
-    # Get the authors and counts from the dictionary
-    authors_list = list(author_counts.keys())
-    counts_list = list(author_counts.values())
+    # Plot sentiment scores as a scatterplot
+    ax.scatter(timestamps, sentiment_scores, color="purple", alpha=0.7)
 
-    # Create a bar chart using the bar() method.
-    # Pass in the x list, the y list, and the color
-    ax.bar(authors_list, counts_list, color="skyblue")
+    ax.set_xlabel("Timestamps")
+    ax.set_ylabel("Sentiment Scores")
+    ax.set_title("Hanson: Real-Time Sentiment Scores Over Time")
 
-    # Use the built-in axes methods to set the labels and title
-    ax.set_xlabel("Authors")
-    ax.set_ylabel("Message Counts")
-    ax.set_title("Hanson: Real-Time Author Message Counts")
-
-    # Use the set_xticklabels() method to rotate the x-axis labels
-    # Pass in the x list, specify the rotation angle is 45 degrees,
-    # and align them to the right
-    # ha stands for horizontal alignment
-    ax.set_xticklabels(authors_list, rotation=45, ha="right")
-
-    # Use the tight_layout() method to automatically adjust the padding
     plt.tight_layout()
-
-    # Draw the chart
     plt.draw()
-
-    # Pause briefly to allow some time for the chart to render
     plt.pause(0.01)
 
 
@@ -128,40 +112,29 @@ def update_chart():
 
 def process_message(message: str) -> None:
     """
-    Process a single JSON message from Kafka and update the chart.
+    Process a single JSON message from Kafka and update the scatterplot chart.
 
     Args:
         message (str): The JSON message as a string.
     """
     try:
-        # Log the raw message for debugging
         logger.debug(f"Raw message: {message}")
 
         # Parse the JSON string into a Python dictionary
         message_dict: dict = json.loads(message)
-
-        # Ensure the processed JSON is logged for debugging
         logger.info(f"Processed JSON message: {message_dict}")
 
-        # Ensure it's a dictionary before accessing fields
-        if isinstance(message_dict, dict):
-            # Extract the 'author' field from the Python dictionary
-            author = message_dict.get("author", "unknown")
-            logger.info(f"Message received from author: {author}")
+        # Extract sentiment score and timestamp
+        sentiment = message_dict.get("sentiment")
+        timestamp = message_dict.get("timestamp")
 
-            # Increment the count for the author
-            author_counts[author] += 1
-
-            # Log the updated counts
-            logger.info(f"Updated author counts: {dict(author_counts)}")
-
-            # Update the chart
+        if sentiment is not None and timestamp is not None:
+            sentiment_scores.append(sentiment)
+            timestamps.append(timestamp)
             update_chart()
-
-            # Log the updated chart
-            logger.info(f"Chart updated successfully for message: {message}")
+            logger.info(f"Chart updated with sentiment={sentiment}, timestamp={timestamp}")
         else:
-            logger.error(f"Expected a dictionary but got: {type(message_dict)}")
+            logger.warning(f"Message missing 'sentiment' or 'timestamp': {message_dict}")
 
     except json.JSONDecodeError:
         logger.error(f"Invalid JSON message: {message}")

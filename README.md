@@ -230,7 +230,7 @@ For each one, you will need to:
 3. Know the command that works on your machine to execute python (e.g. py or python3).
 4. Know how to use the -m (module flag to run your file as a module).
 5. Know the full name of the module you want to run.
-   - Look in the producers folder for json_producer_case.
+   - Look in the producers folder for project_producer_case.
    - Look in the consumers folder for project_consumer_hanson.
 
 ### Review the Application Code

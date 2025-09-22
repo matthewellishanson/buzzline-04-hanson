@@ -330,3 +330,104 @@
 2025-09-21 19:27:10 | WARNING | Producer interrupted by user.
 2025-09-21 19:27:10 | INFO | Kafka producer closed.
 2025-09-21 19:27:10 | INFO | END producer.
+2025-09-21 20:59:04 | INFO | Logging to file: logs/project_log.log
+2025-09-21 20:59:04 | INFO | Log sanitization enabled, personal info removed
+2025-09-21 20:59:04 | INFO | START producer...
+2025-09-21 20:59:04 | INFO | Kafka producer connected to localhost:9092
+2025-09-21 20:59:04 | INFO | {'message': 'I just saw a movie! It was boring.', 'author': 'Alice', 'timestamp': '2025-09-21 20:59:04', 'category': 'entertainment', 'sentiment': 0.83, 'keyword_mentioned': 'movie', 'message_length': 34}
+2025-09-21 20:59:04 | INFO | Sent message to Kafka topic 'project_json': {'message': 'I just saw a movie! It was boring.', 'author': 'Alice', 'timestamp': '2025-09-21 20:59:04', 'category': 'entertainment', 'sentiment': 0.83, 'keyword_mentioned': 'movie', 'message_length': 34}
+2025-09-21 20:59:09 | INFO | {'message': 'I just shared a story! It was amazing.', 'author': 'Bob', 'timestamp': '2025-09-21 20:59:09', 'category': 'other', 'sentiment': 0.2, 'keyword_mentioned': 'other', 'message_length': 38}
+2025-09-21 20:59:09 | INFO | Sent message to Kafka topic 'project_json': {'message': 'I just shared a story! It was amazing.', 'author': 'Bob', 'timestamp': '2025-09-21 20:59:09', 'category': 'other', 'sentiment': 0.2, 'keyword_mentioned': 'other', 'message_length': 38}
+2025-09-21 20:59:14 | INFO | {'message': 'I just found recipe! It was boring.', 'author': 'Alice', 'timestamp': '2025-09-21 20:59:14', 'category': 'food', 'sentiment': 0.34, 'keyword_mentioned': 'recipe', 'message_length': 35}
+2025-09-21 20:59:14 | INFO | Sent message to Kafka topic 'project_json': {'message': 'I just found recipe! It was boring.', 'author': 'Alice', 'timestamp': '2025-09-21 20:59:14', 'category': 'food', 'sentiment': 0.34, 'keyword_mentioned': 'recipe', 'message_length': 35}
+2025-09-21 20:59:19 | INFO | {'message': 'I just found a trick! It was exciting.', 'author': 'Bob', 'timestamp': '2025-09-21 20:59:19', 'category': 'other', 'sentiment': 0.1, 'keyword_mentioned': 'other', 'message_length': 38}
+2025-09-21 20:59:19 | INFO | Sent message to Kafka topic 'project_json': {'message': 'I just found a trick! It was exciting.', 'author': 'Bob', 'timestamp': '2025-09-21 20:59:19', 'category': 'other', 'sentiment': 0.1, 'keyword_mentioned': 'other', 'message_length': 38}
+2025-09-21 20:59:24 | INFO | {'message': 'I just saw a movie! It was boring.', 'author': 'Charlie', 'timestamp': '2025-09-21 20:59:24', 'category': 'entertainment', 'sentiment': 0.06, 'keyword_mentioned': 'movie', 'message_length': 34}
+2025-09-21 20:59:24 | INFO | Sent message to Kafka topic 'project_json': {'message': 'I just saw a movie! It was boring.', 'author': 'Charlie', 'timestamp': '2025-09-21 20:59:24', 'category': 'entertainment', 'sentiment': 0.06, 'keyword_mentioned': 'movie', 'message_length': 34}
+2025-09-21 20:59:29 | INFO | {'message': 'I just found JavaScript! It was boring.', 'author': 'Charlie', 'timestamp': '2025-09-21 20:59:29', 'category': 'tech', 'sentiment': 0.23, 'keyword_mentioned': 'JavaScript', 'message_length': 39}
+2025-09-21 20:59:29 | INFO | Sent message to Kafka topic 'project_json': {'message': 'I just found JavaScript! It was boring.', 'author': 'Charlie', 'timestamp': '2025-09-21 20:59:29', 'category': 'tech', 'sentiment': 0.23, 'keyword_mentioned': 'JavaScript', 'message_length': 39}
+2025-09-21 20:59:32 | INFO | Logging to file: logs/project_log.log
+2025-09-21 20:59:32 | INFO | Log sanitization enabled, personal info removed
+2025-09-21 20:59:33 | INFO | START consumer.
+2025-09-21 20:59:33 | INFO | Kafka topic: project_json
+2025-09-21 20:59:33 | INFO | Kafka consumer group id: project_group
+2025-09-21 20:59:33 | INFO | Consumer: Topic 'project_json' and group 'project_group'...
+2025-09-21 20:59:33 | INFO | Kafka broker address: localhost:9092
+2025-09-21 20:59:33 | INFO | Creating Kafka consumer. Topic='project_json' and group ID='project_group'.
+2025-09-21 20:59:33 | INFO | Kafka consumer created successfully.
+2025-09-21 20:59:33 | INFO | Polling messages from topic 'project_json'...
+2025-09-21 20:59:33 | ERROR | Error while consuming messages: Invalid file descriptor: -1
+2025-09-21 20:59:33 | INFO | Kafka consumer for topic 'project_json' closed.
+2025-09-21 20:59:33 | INFO | END consumer for topic 'project_json' and group 'project_group'.
+2025-09-21 20:59:34 | INFO | {'message': 'I just tried game! It was exciting.', 'author': 'Eve', 'timestamp': '2025-09-21 20:59:34', 'category': 'gaming', 'sentiment': 0.73, 'keyword_mentioned': 'game', 'message_length': 35}
+2025-09-21 20:59:34 | INFO | Sent message to Kafka topic 'project_json': {'message': 'I just tried game! It was exciting.', 'author': 'Eve', 'timestamp': '2025-09-21 20:59:34', 'category': 'gaming', 'sentiment': 0.73, 'keyword_mentioned': 'game', 'message_length': 35}
+2025-09-21 20:59:39 | INFO | {'message': 'I just saw an app! It was boring.', 'author': 'Eve', 'timestamp': '2025-09-21 20:59:39', 'category': 'other', 'sentiment': 0.1, 'keyword_mentioned': 'other', 'message_length': 33}
+2025-09-21 20:59:39 | INFO | Sent message to Kafka topic 'project_json': {'message': 'I just saw an app! It was boring.', 'author': 'Eve', 'timestamp': '2025-09-21 20:59:39', 'category': 'other', 'sentiment': 0.1, 'keyword_mentioned': 'other', 'message_length': 33}
+2025-09-21 20:59:44 | INFO | {'message': 'I just saw Python! It was amazing.', 'author': 'Bob', 'timestamp': '2025-09-21 20:59:44', 'category': 'tech', 'sentiment': 0.86, 'keyword_mentioned': 'Python', 'message_length': 34}
+2025-09-21 20:59:44 | INFO | Sent message to Kafka topic 'project_json': {'message': 'I just saw Python! It was amazing.', 'author': 'Bob', 'timestamp': '2025-09-21 20:59:44', 'category': 'tech', 'sentiment': 0.86, 'keyword_mentioned': 'Python', 'message_length': 34}
+2025-09-21 20:59:48 | INFO | Logging to file: logs/project_log.log
+2025-09-21 20:59:48 | INFO | Log sanitization enabled, personal info removed
+2025-09-21 20:59:48 | INFO | START consumer.
+2025-09-21 20:59:48 | INFO | Kafka topic: project_json
+2025-09-21 20:59:48 | INFO | Kafka consumer group id: project_group
+2025-09-21 20:59:48 | INFO | Consumer: Topic 'project_json' and group 'project_group'...
+2025-09-21 20:59:48 | INFO | Kafka broker address: localhost:9092
+2025-09-21 20:59:48 | INFO | Creating Kafka consumer. Topic='project_json' and group ID='project_group'.
+2025-09-21 20:59:48 | INFO | Kafka consumer created successfully.
+2025-09-21 20:59:48 | INFO | Polling messages from topic 'project_json'...
+2025-09-21 20:59:49 | INFO | {'message': 'I just tried Python! It was exciting.', 'author': 'Charlie', 'timestamp': '2025-09-21 20:59:49', 'category': 'tech', 'sentiment': 0.32, 'keyword_mentioned': 'Python', 'message_length': 37}
+2025-09-21 20:59:49 | INFO | Sent message to Kafka topic 'project_json': {'message': 'I just tried Python! It was exciting.', 'author': 'Charlie', 'timestamp': '2025-09-21 20:59:49', 'category': 'tech', 'sentiment': 0.32, 'keyword_mentioned': 'Python', 'message_length': 37}
+2025-09-21 20:59:51 | INFO | Processed JSON message: {'message': 'I just saw a movie! It was boring.', 'author': 'Alice', 'timestamp': '2025-09-21 20:59:04', 'category': 'entertainment', 'sentiment': 0.83, 'keyword_mentioned': 'movie', 'message_length': 34}
+2025-09-21 20:59:51 | INFO | Chart updated with sentiment=0.83, timestamp=2025-09-21 20:59:04
+2025-09-21 20:59:51 | INFO | Processed JSON message: {'message': 'I just shared a story! It was amazing.', 'author': 'Bob', 'timestamp': '2025-09-21 20:59:09', 'category': 'other', 'sentiment': 0.2, 'keyword_mentioned': 'other', 'message_length': 38}
+2025-09-21 20:59:51 | INFO | Chart updated with sentiment=0.2, timestamp=2025-09-21 20:59:09
+2025-09-21 20:59:51 | INFO | Processed JSON message: {'message': 'I just found recipe! It was boring.', 'author': 'Alice', 'timestamp': '2025-09-21 20:59:14', 'category': 'food', 'sentiment': 0.34, 'keyword_mentioned': 'recipe', 'message_length': 35}
+2025-09-21 20:59:51 | INFO | Chart updated with sentiment=0.34, timestamp=2025-09-21 20:59:14
+2025-09-21 20:59:51 | INFO | Processed JSON message: {'message': 'I just found a trick! It was exciting.', 'author': 'Bob', 'timestamp': '2025-09-21 20:59:19', 'category': 'other', 'sentiment': 0.1, 'keyword_mentioned': 'other', 'message_length': 38}
+2025-09-21 20:59:51 | INFO | Chart updated with sentiment=0.1, timestamp=2025-09-21 20:59:19
+2025-09-21 20:59:51 | INFO | Processed JSON message: {'message': 'I just saw a movie! It was boring.', 'author': 'Charlie', 'timestamp': '2025-09-21 20:59:24', 'category': 'entertainment', 'sentiment': 0.06, 'keyword_mentioned': 'movie', 'message_length': 34}
+2025-09-21 20:59:51 | INFO | Chart updated with sentiment=0.06, timestamp=2025-09-21 20:59:24
+2025-09-21 20:59:51 | INFO | Processed JSON message: {'message': 'I just found JavaScript! It was boring.', 'author': 'Charlie', 'timestamp': '2025-09-21 20:59:29', 'category': 'tech', 'sentiment': 0.23, 'keyword_mentioned': 'JavaScript', 'message_length': 39}
+2025-09-21 20:59:51 | INFO | Chart updated with sentiment=0.23, timestamp=2025-09-21 20:59:29
+2025-09-21 20:59:51 | INFO | Processed JSON message: {'message': 'I just tried game! It was exciting.', 'author': 'Eve', 'timestamp': '2025-09-21 20:59:34', 'category': 'gaming', 'sentiment': 0.73, 'keyword_mentioned': 'game', 'message_length': 35}
+2025-09-21 20:59:51 | INFO | Chart updated with sentiment=0.73, timestamp=2025-09-21 20:59:34
+2025-09-21 20:59:51 | INFO | Processed JSON message: {'message': 'I just saw an app! It was boring.', 'author': 'Eve', 'timestamp': '2025-09-21 20:59:39', 'category': 'other', 'sentiment': 0.1, 'keyword_mentioned': 'other', 'message_length': 33}
+2025-09-21 20:59:51 | INFO | Chart updated with sentiment=0.1, timestamp=2025-09-21 20:59:39
+2025-09-21 20:59:51 | INFO | Processed JSON message: {'message': 'I just saw Python! It was amazing.', 'author': 'Bob', 'timestamp': '2025-09-21 20:59:44', 'category': 'tech', 'sentiment': 0.86, 'keyword_mentioned': 'Python', 'message_length': 34}
+2025-09-21 20:59:51 | INFO | Chart updated with sentiment=0.86, timestamp=2025-09-21 20:59:44
+2025-09-21 20:59:51 | INFO | Processed JSON message: {'message': 'I just tried Python! It was exciting.', 'author': 'Charlie', 'timestamp': '2025-09-21 20:59:49', 'category': 'tech', 'sentiment': 0.32, 'keyword_mentioned': 'Python', 'message_length': 37}
+2025-09-21 20:59:51 | INFO | Chart updated with sentiment=0.32, timestamp=2025-09-21 20:59:49
+2025-09-21 20:59:54 | INFO | {'message': 'I just tried game! It was weird.', 'author': 'Eve', 'timestamp': '2025-09-21 20:59:54', 'category': 'gaming', 'sentiment': 0.76, 'keyword_mentioned': 'game', 'message_length': 32}
+2025-09-21 20:59:54 | INFO | Sent message to Kafka topic 'project_json': {'message': 'I just tried game! It was weird.', 'author': 'Eve', 'timestamp': '2025-09-21 20:59:54', 'category': 'gaming', 'sentiment': 0.76, 'keyword_mentioned': 'game', 'message_length': 32}
+2025-09-21 20:59:54 | INFO | Processed JSON message: {'message': 'I just tried game! It was weird.', 'author': 'Eve', 'timestamp': '2025-09-21 20:59:54', 'category': 'gaming', 'sentiment': 0.76, 'keyword_mentioned': 'game', 'message_length': 32}
+2025-09-21 20:59:54 | INFO | Chart updated with sentiment=0.76, timestamp=2025-09-21 20:59:54
+2025-09-21 20:59:59 | INFO | {'message': 'I just loved an app! It was amazing.', 'author': 'Alice', 'timestamp': '2025-09-21 20:59:59', 'category': 'other', 'sentiment': 0.75, 'keyword_mentioned': 'other', 'message_length': 36}
+2025-09-21 20:59:59 | INFO | Sent message to Kafka topic 'project_json': {'message': 'I just loved an app! It was amazing.', 'author': 'Alice', 'timestamp': '2025-09-21 20:59:59', 'category': 'other', 'sentiment': 0.75, 'keyword_mentioned': 'other', 'message_length': 36}
+2025-09-21 20:59:59 | INFO | Processed JSON message: {'message': 'I just loved an app! It was amazing.', 'author': 'Alice', 'timestamp': '2025-09-21 20:59:59', 'category': 'other', 'sentiment': 0.75, 'keyword_mentioned': 'other', 'message_length': 36}
+2025-09-21 20:59:59 | INFO | Chart updated with sentiment=0.75, timestamp=2025-09-21 20:59:59
+2025-09-21 21:00:04 | INFO | {'message': 'I just shared Python! It was weird.', 'author': 'Alice', 'timestamp': '2025-09-21 21:00:04', 'category': 'tech', 'sentiment': 0.98, 'keyword_mentioned': 'Python', 'message_length': 35}
+2025-09-21 21:00:04 | INFO | Sent message to Kafka topic 'project_json': {'message': 'I just shared Python! It was weird.', 'author': 'Alice', 'timestamp': '2025-09-21 21:00:04', 'category': 'tech', 'sentiment': 0.98, 'keyword_mentioned': 'Python', 'message_length': 35}
+2025-09-21 21:00:04 | INFO | Processed JSON message: {'message': 'I just shared Python! It was weird.', 'author': 'Alice', 'timestamp': '2025-09-21 21:00:04', 'category': 'tech', 'sentiment': 0.98, 'keyword_mentioned': 'Python', 'message_length': 35}
+2025-09-21 21:00:04 | INFO | Chart updated with sentiment=0.98, timestamp=2025-09-21 21:00:04
+2025-09-21 21:00:09 | INFO | {'message': 'I just shared an app! It was boring.', 'author': 'Alice', 'timestamp': '2025-09-21 21:00:09', 'category': 'other', 'sentiment': 0.41, 'keyword_mentioned': 'other', 'message_length': 36}
+2025-09-21 21:00:09 | INFO | Sent message to Kafka topic 'project_json': {'message': 'I just shared an app! It was boring.', 'author': 'Alice', 'timestamp': '2025-09-21 21:00:09', 'category': 'other', 'sentiment': 0.41, 'keyword_mentioned': 'other', 'message_length': 36}
+2025-09-21 21:00:09 | INFO | Processed JSON message: {'message': 'I just shared an app! It was boring.', 'author': 'Alice', 'timestamp': '2025-09-21 21:00:09', 'category': 'other', 'sentiment': 0.41, 'keyword_mentioned': 'other', 'message_length': 36}
+2025-09-21 21:00:09 | INFO | Chart updated with sentiment=0.41, timestamp=2025-09-21 21:00:09
+2025-09-21 21:00:14 | INFO | {'message': 'I just tried travel! It was amazing.', 'author': 'Alice', 'timestamp': '2025-09-21 21:00:14', 'category': 'travel', 'sentiment': 0.62, 'keyword_mentioned': 'travel', 'message_length': 36}
+2025-09-21 21:00:14 | INFO | Sent message to Kafka topic 'project_json': {'message': 'I just tried travel! It was amazing.', 'author': 'Alice', 'timestamp': '2025-09-21 21:00:14', 'category': 'travel', 'sentiment': 0.62, 'keyword_mentioned': 'travel', 'message_length': 36}
+2025-09-21 21:00:14 | INFO | Processed JSON message: {'message': 'I just tried travel! It was amazing.', 'author': 'Alice', 'timestamp': '2025-09-21 21:00:14', 'category': 'travel', 'sentiment': 0.62, 'keyword_mentioned': 'travel', 'message_length': 36}
+2025-09-21 21:00:14 | INFO | Chart updated with sentiment=0.62, timestamp=2025-09-21 21:00:14
+2025-09-21 21:00:19 | INFO | {'message': 'I just tried recipe! It was amazing.', 'author': 'Charlie', 'timestamp': '2025-09-21 21:00:19', 'category': 'food', 'sentiment': 0.77, 'keyword_mentioned': 'recipe', 'message_length': 36}
+2025-09-21 21:00:19 | INFO | Sent message to Kafka topic 'project_json': {'message': 'I just tried recipe! It was amazing.', 'author': 'Charlie', 'timestamp': '2025-09-21 21:00:19', 'category': 'food', 'sentiment': 0.77, 'keyword_mentioned': 'recipe', 'message_length': 36}
+2025-09-21 21:00:19 | INFO | Processed JSON message: {'message': 'I just tried recipe! It was amazing.', 'author': 'Charlie', 'timestamp': '2025-09-21 21:00:19', 'category': 'food', 'sentiment': 0.77, 'keyword_mentioned': 'recipe', 'message_length': 36}
+2025-09-21 21:00:19 | INFO | Chart updated with sentiment=0.77, timestamp=2025-09-21 21:00:19
+2025-09-21 21:00:23 | WARNING | Consumer interrupted by user.
+2025-09-21 21:00:23 | INFO | Kafka consumer for topic 'project_json' closed.
+2025-09-21 21:00:23 | INFO | END consumer for topic 'project_json' and group 'project_group'.
+2025-09-21 21:00:24 | INFO | {'message': 'I just loved a meme! It was weird.', 'author': 'Eve', 'timestamp': '2025-09-21 21:00:24', 'category': 'humor', 'sentiment': 0.24, 'keyword_mentioned': 'meme', 'message_length': 34}
+2025-09-21 21:00:24 | INFO | Sent message to Kafka topic 'project_json': {'message': 'I just loved a meme! It was weird.', 'author': 'Eve', 'timestamp': '2025-09-21 21:00:24', 'category': 'humor', 'sentiment': 0.24, 'keyword_mentioned': 'meme', 'message_length': 34}
+2025-09-21 21:00:29 | INFO | {'message': 'I just shared an app! It was funny.', 'author': 'Eve', 'timestamp': '2025-09-21 21:00:29', 'category': 'other', 'sentiment': 0.57, 'keyword_mentioned': 'other', 'message_length': 35}
+2025-09-21 21:00:29 | INFO | Sent message to Kafka topic 'project_json': {'message': 'I just shared an app! It was funny.', 'author': 'Eve', 'timestamp': '2025-09-21 21:00:29', 'category': 'other', 'sentiment': 0.57, 'keyword_mentioned': 'other', 'message_length': 35}
+2025-09-21 21:00:33 | WARNING | Producer interrupted by user.
+2025-09-21 21:00:33 | INFO | Kafka producer closed.
+2025-09-21 21:00:33 | INFO | Producer shutting down.
