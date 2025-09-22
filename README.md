@@ -12,6 +12,7 @@ It generates three applications:
 1. A basic producer and consumer that exchange information via a dynamically updated file.
 2. A JSON producer and consumer that exchange information via a Kafka topic.
 3. A CSV producer and consumer that exchange information via a different Kafka topic.
+4. A JSON consumer that visualizes sentiment scores from the json producer on scatterplot (I've always loved scatterplots for the full pictures they can paint of a wide range of data points).
 
 All three applications produce live charts to illustrate the data.
 
@@ -214,6 +215,23 @@ For each one, you will need to:
 5. Know the full name of the module you want to run.
    - Look in the producers folder for csv_producer_case.
    - Look in the consumers folder for csv_consumer_case.
+
+## Task 6: Start a new, custom (and Kafka-based) json streaming application
+
+This will take two terminals:
+
+1. One to run the producer which writes to a Kafka topic.
+2. Another to run the consumer which reads from that Kafka topic.
+
+For each one, you will need to:
+
+1. Open a new terminal.
+2. Activate your .venv.
+3. Know the command that works on your machine to execute python (e.g. py or python3).
+4. Know how to use the -m (module flag to run your file as a module).
+5. Know the full name of the module you want to run.
+   - Look in the producers folder for json_producer_case.
+   - Look in the consumers folder for project_consumer_hanson.
 
 ### Review the Application Code
 
